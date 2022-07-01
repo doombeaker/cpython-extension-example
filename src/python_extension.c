@@ -6,7 +6,7 @@ static PyObject * add_two(PyObject *self, PyObject *args) {
     if (!PyArg_ParseTuple(args, "ff", &float_arg1, &float_arg2)) {
         return NULL;
     }
-    return Py_BuildValue("f", float_arg1, float_arg2);
+    return Py_BuildValue("f", float_arg1 + float_arg2);
 }
 
 static PyMethodDef ttlarva_funcs[] = {
